@@ -34,7 +34,9 @@ public class Player : SingletonMonobehaviour<Player>
     private ToolEffect toolEffect = ToolEffect.none;
 
     private Rigidbody2D rigidBody2D;
+#pragma warning disable #CS0414
     private Direction playerDirection;
+#pragma warning restore #CS0414
     private float movementSpeed;
 
     private bool _playerInputIsDisabled = false;
@@ -44,6 +46,7 @@ public class Player : SingletonMonobehaviour<Player>
     {
         base.Awake();
         rigidBody2D = GetComponent<Rigidbody2D>();
+        playerDirection = Direction.none;
     }
 
     private void Update()
