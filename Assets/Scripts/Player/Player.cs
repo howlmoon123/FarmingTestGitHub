@@ -34,12 +34,14 @@ public class Player : SingletonMonobehaviour<Player>
     private ToolEffect toolEffect = ToolEffect.none;
 
     private Rigidbody2D rigidBody2D;
-#pragma warning disable #CS0414
+#pragma warning disable CS1072
+#pragma warning disable CS0414
     private Direction playerDirection;
-#pragma warning disable CS1072 // Expected identifier or numeric literal
-#pragma warning restore #CS0414
+ // Expected identifier or numeric literal
+
     private float movementSpeed;
-#pragma warning restore CS1072 // Expected identifier or numeric literal
+#pragma warning restore CS1072 
+#pragma warning restore CS0414
 
     private bool _playerInputIsDisabled = false;
     public bool PlayerInputIsDisabled { get => _playerInputIsDisabled; set => _playerInputIsDisabled = value; }
