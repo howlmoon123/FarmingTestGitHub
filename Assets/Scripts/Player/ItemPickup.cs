@@ -11,7 +11,15 @@ public class ItemPickup : MonoBehaviour
         if(item != null)
         {
           ItemsDetails details =  InventoryManager.Instance.GetItemsDetails(item.ItemCode);
-            Debug.Log("Item Description " + details.itemDescription);
+          if(details.canBePickedUp)
+            {
+                // Add item to inventory
+                InventoryManager.Instance.AddItem(InventoryLocation.player, item, target.gameObject);
+
+                // Play pick up sound
+              //  AudioManager.Instance.PlaySound(SoundName.effectPickupSound);
+
+            }
         }
        
     }
