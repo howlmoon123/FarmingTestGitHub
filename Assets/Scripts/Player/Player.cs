@@ -33,6 +33,8 @@ public class Player : SingletonMonobehaviour<Player>
     private WaitForSeconds pickAnimationPause;
     private ToolEffect toolEffect = ToolEffect.none;
 
+    private Camera mainCamera;
+
     private Rigidbody2D rigidBody2D;
 #pragma warning disable CS1072
 #pragma warning disable CS0414
@@ -51,6 +53,7 @@ public class Player : SingletonMonobehaviour<Player>
         base.Awake();
         rigidBody2D = GetComponent<Rigidbody2D>();
         playerDirection = Direction.none;
+        mainCamera = Camera.main;
     }
 
     private void Update()
@@ -164,5 +167,10 @@ public class Player : SingletonMonobehaviour<Player>
         isSwingingToolUp = false;
         isSwingingToolDown = false;
         toolEffect = ToolEffect.none;
+    }
+
+    public Vector3 GetPlayerViewportPosition()
+    {
+        return mainCamera.WorldToViewportPoint(transform.position);
     }
 }
