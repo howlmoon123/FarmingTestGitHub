@@ -8,8 +8,9 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
     private Dictionary<int, ItemsDetails> itemDetailsDictionary;
 
     public List<InventoryItem>[] inventoryLists;
-
-   // [HideInInspector]
+    private int[] selectedInventoryItem; // the index of the array is the inventory list, and the value is the item code
+    
+    // [HideInInspector]
     public int[] inventoryListCapacityIntArray; // the index of the array is the inventory list (from the InventoryLocation enum), and the value is the capacity of that inventory list
 
 
@@ -23,6 +24,15 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         CreateInventoryLists();
 
         CreateItemDetailsDictionary();
+
+        // Initailise selected inventory item array
+        selectedInventoryItem = new int[(int)InventoryLocation.count];
+
+        for (int i = 0; i < selectedInventoryItem.Length; i++)
+        {
+            selectedInventoryItem[i] = -1;
+        }
+
     }
 
     private void CreateInventoryLists()
@@ -113,9 +123,10 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         inventoryItem.itemQuantity = 1;
         inventoryList.Add(inventoryItem);
 
-        DebugPrintInventoryList(inventoryList);
+      //  DebugPrintInventoryList(inventoryList);
     }
 
+    /*
     private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
     {
         foreach(InventoryItem inventoryItem in inventoryList)
@@ -124,7 +135,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         }
         Debug.Log("*****************************************************************");
     }
-
+    */
     private void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
     {
         InventoryItem inventoryItem = new InventoryItem();
@@ -134,7 +145,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         inventoryItem.itemCode = itemCode;
         inventoryList[position] = inventoryItem;
 
-        DebugPrintInventoryList(inventoryList);
+      //  DebugPrintInventoryList(inventoryList);
     }
 
     private int FindItemInInventory(InventoryLocation inventoryLocation, int itemCode)
@@ -173,6 +184,14 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
 
         //  Send event that inventory has been updated
         EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryLists[(int)inventoryLocation]);
+    }
+
+    /// <summary>
+    /// Set the selected inventory item for inventoryLocation to itemCode
+    /// </summary>
+    public void SetSelectedInventoryItem(InventoryLocation inventoryLocation, int itemCode)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = itemCode;
     }
 
 }

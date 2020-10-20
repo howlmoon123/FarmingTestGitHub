@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1453033759917607671}
   - component: {fileID: 7372338466749548641}
   - component: {fileID: 3987276182332296992}
+  - component: {fileID: 2130522539615999222}
   m_Layer: 0
   m_Name: UIInventorySlot
   m_TagString: Untagged
@@ -90,6 +91,35 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &2130522539615999222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413574603963187435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventorySlotHighlight: {fileID: 2597787527295051797}
+  inventorySlotImage: {fileID: 7372338466749548641}
+  textMeshProUGUI: {fileID: 4552923576514658127}
+  itemDetails:
+    itemCode: 0
+    itemType: 0
+    itemDescription: 
+    itemSprite: {fileID: 0}
+    itemLongDescription: 
+    itemUseGridRadius: 0
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 0
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+  itemQuantity: 0
 --- !u!1 &5718149483323706911
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -302,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
