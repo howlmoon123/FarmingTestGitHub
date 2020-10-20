@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot1
@@ -232,6 +236,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot8
@@ -334,6 +342,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot6
@@ -429,6 +441,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 381782740}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &403032043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 381782740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &449968135
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +514,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2447ae5d1aab7544aecf5ce05abbde3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blank16x16sprite: {fileID: 21300000, guid: 89c46045b5f23d840b62099f6f1f6344, type: 3}
+  inventorySlot:
+  - {fileID: 1046616652}
+  - {fileID: 1678267875}
+  - {fileID: 876298544}
+  - {fileID: 1419696437}
+  - {fileID: 1299286390}
+  - {fileID: 1210738492}
+  - {fileID: 403032043}
+  - {fileID: 1107028118}
+  - {fileID: 561356808}
+  - {fileID: 1587799122}
+  - {fileID: 923289677}
+  - {fileID: 700643820}
+  inventoryBarDraggedItem: {fileID: 3530518145178628494, guid: d6d9b15aa1029f44b87fd669df1d152b, type: 3}
+  inventoryTextBoxGameobject: {fileID: 0}
 --- !u!114 &449968138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +738,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &561356808 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 336418576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &610822216
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +813,17 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &700643820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 1357204776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &754647301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -770,6 +831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot9
@@ -865,6 +930,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 754647301}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &876298544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 923547607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &923289677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 1177285405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &923547607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -872,6 +959,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot2
@@ -967,6 +1058,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 923547607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1046616652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 6841575294191693852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1090166243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -974,6 +1076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot3
@@ -1069,6 +1175,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 1090166243}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1107028118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 1525338627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1177285405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1076,6 +1193,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot10
@@ -1171,6 +1292,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 1177285405}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1210738492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 1559440682}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1298276500
 GameObject:
   m_ObjectHideFlags: 3
@@ -1258,6 +1390,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1299286390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 2044936384}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1357204776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1265,6 +1408,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot11
@@ -1360,6 +1507,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 1357204776}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1419696437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 1090166243}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1487771520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,6 +1570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot7
@@ -1613,6 +1775,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot5
@@ -1708,6 +1874,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 1559440682}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587799122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 754647301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1678267875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+  m_PrefabInstance: {fileID: 232140048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389062b9ffbbcb47a813bce89ab0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1735638774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +2067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot4
@@ -2738,6 +2930,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 449968136}
     m_Modifications:
+    - target: {fileID: 2130522539615999222, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 449968137}
     - target: {fileID: 2413574603963187435, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot0

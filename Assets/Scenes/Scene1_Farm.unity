@@ -8333,7 +8333,7 @@ GameObject:
   - component: {fileID: 1288977063}
   m_Layer: 0
   m_Name: ITems
-  m_TagString: Untagged
+  m_TagString: ItemsParentTransform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

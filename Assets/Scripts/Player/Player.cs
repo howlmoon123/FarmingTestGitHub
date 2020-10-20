@@ -59,17 +59,23 @@ public class Player : SingletonMonobehaviour<Player>
     private void Update()
     {
         #region Player Input
-        ResetAnimationTriggers();
-        PlayerMovementInput();
-        PlayerWalkInput();
 
-        // Send event to any listeners for player movement input
-        EventHandler.CallMovmentEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
-            isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
-            isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown,
-            isPickingRight, isPickingLeft, isPickingUp, isPickingDown,
-            isSwingingToolRight, isSwingingToolLeft, isSwingingToolUp, isSwingingToolDown,
-            false, false, false, false);
+        if(!PlayerInputIsDisabled)
+        {
+            ResetAnimationTriggers();
+            PlayerMovementInput();
+            PlayerWalkInput();
+
+            // Send event to any listeners for player movement input
+            EventHandler.CallMovmentEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
+                isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
+                isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown,
+                isPickingRight, isPickingLeft, isPickingUp, isPickingDown,
+                isSwingingToolRight, isSwingingToolLeft, isSwingingToolUp, isSwingingToolDown,
+                false, false, false, false);
+        }
+
+       
         #endregion
     }
 
@@ -167,6 +173,41 @@ public class Player : SingletonMonobehaviour<Player>
         isSwingingToolUp = false;
         isSwingingToolDown = false;
         toolEffect = ToolEffect.none;
+    }
+
+    public void DisablePlayerInputAndResetMovement()
+    {
+        DisablePlayerInput();
+        ResetMovement();
+
+        // Send event to any listeners for player movement input
+        EventHandler.CallMovmentEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
+            isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
+            isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown,
+            isPickingRight, isPickingLeft, isPickingUp, isPickingDown,
+             isSwingingToolRight, isSwingingToolLeft, isSwingingToolUp, isSwingingToolDown,
+             false, false, false, false);
+    }
+
+    private void ResetMovement()
+    {
+        // Reset movement
+        xInput = 0f;
+        yInput = 0f;
+        isRunning = false;
+        isWalking = false;
+        isIdle = true;
+    }
+
+
+    public void DisablePlayerInput()
+    {
+        PlayerInputIsDisabled = true;
+    }
+
+    public void EnablePlayerInput()
+    {
+        PlayerInputIsDisabled = false;
     }
 
     public Vector3 GetPlayerViewportPosition()
