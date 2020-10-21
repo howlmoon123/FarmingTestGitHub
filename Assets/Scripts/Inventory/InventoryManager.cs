@@ -231,6 +231,47 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         }
     }
 
+    /// <summary>
+    /// Get the item type description for an item type - returns the item type description as a string for a given ItemType
+    /// </summary>
+
+    public string GetItemTypeDescription(ItemType itemType)
+    {
+        string itemTypeDescription;
+        switch (itemType)
+        {
+            case ItemType.Breaking_Tool:
+                itemTypeDescription = Settings.BreakingTool;
+                break;
+
+            case ItemType.Chopping_Tool:
+                itemTypeDescription = Settings.ChoppingTool;
+                break;
+
+            case ItemType.Hoeing_Tool:
+                itemTypeDescription = Settings.HoeingTool;
+                break;
+
+            case ItemType.Reaping_Tool:
+                itemTypeDescription = Settings.ReapingTool;
+                break;
+
+            case ItemType.Watering_Tool:
+                itemTypeDescription = Settings.WateringTool;
+                break;
+
+            case ItemType.Collecting_Tool:
+                itemTypeDescription = Settings.CollectingTool;
+                break;
+
+            default:
+                itemTypeDescription = itemType.ToString();
+                break;
+        }
+
+        return itemTypeDescription;
+    }
+
     private void RemoveItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
     {
         InventoryItem inventoryItem = new InventoryItem();
