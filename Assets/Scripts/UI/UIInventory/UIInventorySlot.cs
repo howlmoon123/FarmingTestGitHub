@@ -15,6 +15,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private UIInventoryBar inventoryBar = null;
     [SerializeField] private GameObject itemPrefab = null;
     [SerializeField] private int slotNumber = 0;
+    [HideInInspector] public bool isSelected = false;
 
     public Image inventorySlotHighlight;
     public Image inventorySlotImage;
@@ -22,7 +23,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     [HideInInspector] public ItemsDetails itemDetails;
     [HideInInspector] public int itemQuantity;
-    internal bool isSelected;
+   
 
     private void Awake()
     {
@@ -125,7 +126,22 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        // if left click
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            // if inventory slot currently selected then deselect
+            if (isSelected == true)
+            {
+                ClearSelectedItem();
+            }
+            else
+            {
+                if (itemQuantity > 0)
+                {
+                    SetSelectedItem();
+                }
+            }
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -163,6 +179,75 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 inventoryBar.inventoryTextBoxGameobject.transform.position = new Vector3(transform.position.x, transform.position.y - 50f, transform.position.z);
             }
         }
+    }
+
+    private void SetSelectedItem()
+    {
+        // Clear currently highlighted items
+        inventoryBar.ClearHighlightOnInventorySlots();
+
+        // Highlight item on inventory bar
+        isSelected = true;
+
+        // Set highlighted inventory slots
+        inventoryBar.SetHighlightedInventorySlots();
+
+        // Set use radius for cursors
+        gridCursor.ItemUseGridRadius = itemDetails.itemUseGridRadius;
+        cursor.ItemUseRadius = itemDetails.itemUseRadius;
+
+        // If item requires a grid cursor then enable cursor
+        if (itemDetails.itemUseGridRadius > 0)
+        {
+            gridCursor.EnableCursor();
+        }
+        else
+        {
+            gridCursor.DisableCursor();
+        }
+
+        // If item requires a cursor then enable cursor
+        if (itemDetails.itemUseRadius > 0f)
+        {
+            cursor.EnableCursor();
+        }
+        else
+        {
+            cursor.DisableCursor();
+        }
+
+        // Set item type
+        gridCursor.SelectedItemType = itemDetails.itemType;
+        cursor.SelectedItemType = itemDetails.itemType;
+
+        // Set item selected in inventory
+        InventoryManager.Instance.SetSelectedInventoryItem(InventoryLocation.player, itemDetails.itemCode);
+
+        if (itemDetails.canBeCarried == true)
+        {
+            // Show player carrying item
+            Player.Instance.ShowCarriedItem(itemDetails.itemCode);
+        }
+        else // show player carrying nothing
+        {
+            Player.Instance.ClearCarriedItem();
+        }
+    }
+
+    public void ClearSelectedItem()
+    {
+        ClearCursors();
+
+        // Clear currently highlighted items
+        inventoryBar.ClearHighlightOnInventorySlots();
+
+        isSelected = false;
+
+        // set no item selected in inventory
+        InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player);
+
+        // Clear player carrying item
+        Player.Instance.ClearCarriedItem();
     }
 
     public void DestroyInventoryTextBox()

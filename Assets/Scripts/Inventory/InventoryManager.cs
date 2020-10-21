@@ -195,6 +195,15 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
     }
 
     /// <summary>
+    /// Clear the selected inventory item for inventoryLocation
+    /// </summary>
+    public void ClearSelectedInventoryItem(InventoryLocation inventoryLocation)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = -1;
+    }
+
+
+    /// <summary>
     /// Remove an item from the inventory, and create a game object at the position it was dropped
     /// </summary>
     public void RemoveItem(InventoryLocation inventoryLocation, int itemCode)
