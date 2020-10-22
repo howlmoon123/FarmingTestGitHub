@@ -56,10 +56,10 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 InventoryManager.Instance.SwapInventoryItems(InventoryLocation.player, slotNumber, toSlotNumber);
 
                 // Destroy inventory text box
-              //  DestroyInventoryTextBox();
+                DestroyInventoryTextBox();
 
                 // Clear selected item
-              //  ClearSelectedItem();
+                ClearSelectedItem();
             }
             // else attempt to drop the item if it can be dropped
             else
@@ -97,7 +97,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             // Get image for dragged item
             Image draggedItemImage = draggedItem.GetComponentInChildren<Image>();
             draggedItemImage.sprite = inventorySlotImage.sprite;
-
+            SetSelectedItem();
            
         }
     }
@@ -107,7 +107,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     /// </summary>
     private void DropSelectedItemAtMousePosition()
     {
-        if (itemDetails != null)
+        if (itemDetails != null && isSelected)
         {
             // If  a valid cursor position
            
@@ -119,8 +119,13 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
                 // Remove item from players inventory
                 InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
+            // If no more of item then clear selected
+            if (InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) == -1)
+            {
+                ClearSelectedItem();
+            }
 
-                
+
         }
     }
 
@@ -193,32 +198,32 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         inventoryBar.SetHighlightedInventorySlots();
 
         // Set use radius for cursors
-        gridCursor.ItemUseGridRadius = itemDetails.itemUseGridRadius;
-        cursor.ItemUseRadius = itemDetails.itemUseRadius;
+        // gridCursor.ItemUseGridRadius = itemDetails.itemUseGridRadius;
+        //cursor.ItemUseRadius = itemDetails.itemUseRadius;
 
         // If item requires a grid cursor then enable cursor
         if (itemDetails.itemUseGridRadius > 0)
         {
-            gridCursor.EnableCursor();
+            //  gridCursor.EnableCursor();
         }
         else
         {
-            gridCursor.DisableCursor();
+            //    gridCursor.DisableCursor();
         }
 
         // If item requires a cursor then enable cursor
         if (itemDetails.itemUseRadius > 0f)
         {
-            cursor.EnableCursor();
+            // cursor.EnableCursor();
         }
         else
         {
-            cursor.DisableCursor();
+            // cursor.DisableCursor();
         }
 
         // Set item type
-        gridCursor.SelectedItemType = itemDetails.itemType;
-        cursor.SelectedItemType = itemDetails.itemType;
+        //gridCursor.SelectedItemType = itemDetails.itemType;
+        //cursor.SelectedItemType = itemDetails.itemType;
 
         // Set item selected in inventory
         InventoryManager.Instance.SetSelectedInventoryItem(InventoryLocation.player, itemDetails.itemCode);
@@ -226,28 +231,23 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (itemDetails.canBeCarried == true)
         {
             // Show player carrying item
-            Player.Instance.ShowCarriedItem(itemDetails.itemCode);
+            //  Player.Instance.ShowCarriedItem(itemDetails.itemCode);
         }
         else // show player carrying nothing
         {
-            Player.Instance.ClearCarriedItem();
+            //Player.Instance.ClearCarriedItem();
         }
     }
 
     public void ClearSelectedItem()
     {
-        ClearCursors();
-
         // Clear currently highlighted items
         inventoryBar.ClearHighlightOnInventorySlots();
 
         isSelected = false;
 
         // set no item selected in inventory
-        InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player);
-
-        // Clear player carrying item
-        Player.Instance.ClearCarriedItem();
+        InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player); 
     }
 
     public void DestroyInventoryTextBox()

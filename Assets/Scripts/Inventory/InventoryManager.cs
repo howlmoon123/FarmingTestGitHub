@@ -148,7 +148,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
       //  DebugPrintInventoryList(inventoryList);
     }
 
-    private int FindItemInInventory(InventoryLocation inventoryLocation, int itemCode)
+    public int FindItemInInventory(InventoryLocation inventoryLocation, int itemCode)
     {
         List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
 

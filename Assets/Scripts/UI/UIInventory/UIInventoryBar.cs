@@ -121,6 +121,27 @@ public class UIInventoryBar : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Clear all highlights from the inventory bar
+    /// </summary>
+    public void ClearHighlightOnInventorySlots()
+    {
+        if (inventorySlot.Length > 0)
+        {
+            // loop through inventory slots and clear highlight sprites
+            for (int i = 0; i < inventorySlot.Length; i++)
+            {
+                if (inventorySlot[i].isSelected)
+                {
+                    inventorySlot[i].isSelected = false;
+                    inventorySlot[i].inventorySlotHighlight.color = new Color(0f, 0f, 0f, 0f);
+                    // Update inventory to show item as not selected
+                    InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player);
+                }
+            }
+        }
+    }
     private void SwitchInventoryBarPosition()
     {
         Vector3 playerViewportPosition = Player.Instance.GetPlayerViewportPosition();
