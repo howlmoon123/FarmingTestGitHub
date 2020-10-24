@@ -343,6 +343,75 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4488222990549026785, guid: e4f4b5d172308b54d99dfad5edca33d2, type: 3}
   m_PrefabInstance: {fileID: 336418576}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &362195665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362195666}
+  - component: {fileID: 362195667}
+  m_Layer: 0
+  m_Name: CharacterCustomiser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362195666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362195665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1901556256643906057}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362195667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362195665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533d81ceef02962479a63d0cc57588ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 8119188499784127017}
+  soAnimationTypeArray:
+  - {fileID: 11400000, guid: 509fac3b23bbc664c846c62a88dcca62, type: 2}
+  - {fileID: 11400000, guid: e26d269f8aa35fc48b26d7c50d6c6755, type: 2}
+  - {fileID: 11400000, guid: 5ee09a65625d8b547823184e3e5f66d7, type: 2}
+  - {fileID: 11400000, guid: 7832837f2a42eeb4e9295985874d3f28, type: 2}
+  - {fileID: 11400000, guid: 1268faf88096a344ab10a4aa944023e1, type: 2}
+  - {fileID: 11400000, guid: d3a0faea64112c84baa0038e8f95d5ea, type: 2}
+  - {fileID: 11400000, guid: 727ff8cde3429d045a3022372b34f2a1, type: 2}
+  - {fileID: 11400000, guid: 7b09ae006b28663439e45ee32b623720, type: 2}
+  - {fileID: 11400000, guid: 994a2c99673c5e543a7ebd36afc426d9, type: 2}
+  - {fileID: 11400000, guid: d6e1ecd94a909fa48978c7d3d86b2acb, type: 2}
+  - {fileID: 11400000, guid: c98aa1c227d1ed149a78c6ec71dd87d2, type: 2}
+  - {fileID: 11400000, guid: 7eb1f3d0428c25d47b83695940a52d2b, type: 2}
+  - {fileID: 11400000, guid: 824c640ef3a134f4d9a44dee4b535022, type: 2}
+  - {fileID: 11400000, guid: 760b663b2913b5e4e9908953f620def1, type: 2}
+  - {fileID: 11400000, guid: d261ed73205e5634d96fe6b3696a7d47, type: 2}
+  - {fileID: 11400000, guid: b334b51af6d857b498435dbf6f94ff73, type: 2}
+  - {fileID: 11400000, guid: 2be955df04159e949915b16996a5b373, type: 2}
+  - {fileID: 11400000, guid: 9099b24782c15dd4fa07bf781bb847d6, type: 2}
+  - {fileID: 11400000, guid: cba6e6ff0b46c02428770ab7b5c54109, type: 2}
+  - {fileID: 11400000, guid: ddcd1f1aa1062d446a78034fd7fe3814, type: 2}
+  - {fileID: 11400000, guid: c586e1fda1790f741b01afd14dd00845, type: 2}
+  - {fileID: 11400000, guid: b30d22172ee539343b51bf466d2035a6, type: 2}
+  - {fileID: 11400000, guid: 10e025d4da35aef46978da8817d84c41, type: 2}
+  - {fileID: 11400000, guid: 8e378d5be4a6c8b4c956eb9bc6b05213, type: 2}
 --- !u!1001 &381782740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2443,6 +2512,7 @@ Transform:
   - {fileID: 2882973789187410617}
   - {fileID: 2200297462029480910}
   - {fileID: 2891929571147178739}
+  - {fileID: 362195666}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2602,7 +2672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7328927211235179777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1901556256643906057}
@@ -3278,3 +3348,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5a14eb32ddc3442ac0a44e362e9bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equippedItemSpriteRenderer: {fileID: 2570767417174920357}

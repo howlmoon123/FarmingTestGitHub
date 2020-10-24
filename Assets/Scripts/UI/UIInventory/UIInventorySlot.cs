@@ -231,11 +231,11 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (itemDetails.canBeCarried == true)
         {
             // Show player carrying item
-            //  Player.Instance.ShowCarriedItem(itemDetails.itemCode);
+              Player.Instance.ShowCarriedItem(itemDetails.itemCode);
         }
         else // show player carrying nothing
         {
-            //Player.Instance.ClearCarriedItem();
+            Player.Instance.ClearCarriedItem();
         }
     }
 
@@ -247,7 +247,10 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         isSelected = false;
 
         // set no item selected in inventory
-        InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player); 
+        InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player);
+
+        // Clear player carrying item
+        Player.Instance.ClearCarriedItem();
     }
 
     public void DestroyInventoryTextBox()
