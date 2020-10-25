@@ -85,6 +85,7 @@ public class Player : SingletonMonobehaviour<Player>
             ResetAnimationTriggers();
             PlayerMovementInput();
             PlayerWalkInput();
+            PlayerTestInput();
 
             // Send event to any listeners for player movement input
             EventHandler.CallMovmentEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
@@ -208,6 +209,28 @@ public class Player : SingletonMonobehaviour<Player>
              isSwingingToolRight, isSwingingToolLeft, isSwingingToolUp, isSwingingToolDown,
              false, false, false, false);
     }
+
+
+    // TODO: Remove
+    /// <summary>
+    /// Temp routine for test input
+    /// </summary>
+    private void PlayerTestInput()
+    {
+        // Trigger Advance Time
+        if (Input.GetKey(KeyCode.T))
+        {
+            TimeManager.Instance.TestAdvanceGameMinute();
+        }
+
+        // Trigger Advance Day
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            TimeManager.Instance.TestAdvanceGameDay();
+        }
+
+    }
+
 
     private void ResetMovement()
     {

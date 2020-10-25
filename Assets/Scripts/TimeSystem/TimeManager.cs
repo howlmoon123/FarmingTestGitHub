@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -142,4 +141,27 @@ public class TimeManager : SingletonMonobehaviour<TimeManager>
         return gameTime;
     }
 
+    //TODO:Remove
+    /// <summary>
+    /// Advance 1 game minute
+    /// </summary>
+    public void TestAdvanceGameMinute()
+    {
+        for (int i = 0; i < 60; i++)
+        {
+            UpdateGameSecond();
+        }
+    }
+
+    //TODO:Remove
+    /// <summary>
+    /// Advance 1 day
+    /// </summary>
+    public void TestAdvanceGameDay()
+    {
+        for (int i = 0; i < 86400; i++)
+        {
+            UpdateGameSecond();
+        }
+    }
 }
