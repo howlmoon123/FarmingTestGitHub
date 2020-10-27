@@ -114,6 +114,7 @@ public class SceneControllerManager : SingletonMonobehaviour<SceneControllerMana
     // This will be called when the player wants to switch scenes.
     public void FadeAndLoadScene(string sceneName, Vector3 spawnPosition)
     {
+        
         // If a fade isn't happening then start fading and switching scenes.
         if (!isFading)
         {
