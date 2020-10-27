@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class SceneTeleport : MonoBehaviour
 {
+
     [SerializeField] private SceneName sceneNameGoto;
     [SerializeField] private Vector3 scenePositionGoto = new Vector3();
 

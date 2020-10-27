@@ -51,7 +51,7 @@ public class SceneControllerManager : SingletonMonobehaviour<SceneControllerMana
         yield return StartCoroutine(Fade(1f));
 
         // Store scene data
-        //  SaveLoadManager.Instance.StoreCurrentSceneData();
+       // SaveLoadManager.Instance.StoreCurrentSceneData();
 
         // Set player position
 
@@ -70,7 +70,7 @@ public class SceneControllerManager : SingletonMonobehaviour<SceneControllerMana
         EventHandler.CallAfterSceneLoadEvent();
 
         // Restore new scene data
-      //  SaveLoadManager.Instance.RestoreCurrentSceneData();
+       // SaveLoadManager.Instance.RestoreCurrentSceneData();
 
         // Start fading back in and wait for it to finish before exiting the function.
         yield return StartCoroutine(Fade(0f));
@@ -103,7 +103,7 @@ public class SceneControllerManager : SingletonMonobehaviour<SceneControllerMana
         // If this event has any subscribers, call it.
         EventHandler.CallAfterSceneLoadEvent();
 
-       // SaveLoadManager.Instance.RestoreCurrentSceneData();
+        //SaveLoadManager.Instance.RestoreCurrentSceneData();
 
 
         // Once the scene is finished loading, start fading in.
