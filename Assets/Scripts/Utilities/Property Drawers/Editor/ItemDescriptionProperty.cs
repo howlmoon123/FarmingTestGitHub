@@ -2,12 +2,15 @@
 using UnityEngine;
 using UnityEditor;
 
+
 [CustomPropertyDrawer(typeof(ItemCodeDescriptionAttribute))]
 public class ItemDescriptionProperty : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
+        
         return EditorGUI.GetPropertyHeight(property) * 2;
+      
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -33,12 +36,18 @@ public class ItemDescriptionProperty : PropertyDrawer
     private string GetItemDescription(int itemCode)
     {
         SO_Item so_itemList;
+      
 
-        so_itemList = AssetDatabase.LoadAssetAtPath("Assets/ScriptableObjects/Item/so_ItemList.asset", typeof(SO_Item)) as SO_Item;
+        so_itemList = AssetDatabase.LoadAssetAtPath("Assets/Scriptable Object Assets/Item/so_ItemList.asset", typeof(SO_Item)) as SO_Item;
+
+       
 
         List<ItemsDetails> itemDetailsList = so_itemList.itemsDetails;
 
         ItemsDetails itemDetail = itemDetailsList.Find(x => x.itemCode == itemCode);
+       //\Assets\Scriptable Object Assets\Item
+
+
 
         if (itemDetail != null)
         {

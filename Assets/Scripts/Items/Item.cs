@@ -24,7 +24,7 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void Init(int itemCodeParam)
+    private void Init(int itemCodeParam)
     {
         if(itemCodeParam != 0)
         {
@@ -39,5 +39,10 @@ public class Item : MonoBehaviour
                 gameObject.AddComponent<ItemNudge>();
             }
         }
+    }
+
+    public void Initi1(int itemCodeParam)
+    {
+        Init(itemCodeParam);
     }
 }

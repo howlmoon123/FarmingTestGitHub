@@ -116,7 +116,7 @@ public class SceneItemsManager : SingletonMonobehaviour<SceneItemsManager>, ISav
     {
         GameObject itemGameObject = Instantiate(itemPrefab, itemPosition, Quaternion.identity, parentItem);
         Item item = itemGameObject.GetComponent<Item>();
-        item.Init(itemCode);
+        item.Initi1(itemCode);
     }
 
     private void InstantiateSceneItems(List<SceneItem> sceneItemList)

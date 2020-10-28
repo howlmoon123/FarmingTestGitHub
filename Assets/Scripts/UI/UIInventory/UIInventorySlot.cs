@@ -119,9 +119,10 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         if (itemDetails != null && isSelected)
         {
+            Debug.Log("On Click event " + itemDetails.itemCode);
             // If  a valid cursor position
-           
-                Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
+
+            Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
                 // Create item from prefab at mouse position
                 GameObject itemGameObject = Instantiate(itemPrefab, new Vector3(worldPosition.x, worldPosition.y - Settings.gridCellSize / 2f, worldPosition.z), Quaternion.identity, parentItem);
                 Item item = itemGameObject.GetComponent<Item>();
@@ -144,6 +145,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         // if left click
         if (eventData.button == PointerEventData.InputButton.Left)
         {
+           
             // if inventory slot currently selected then deselect
             if (isSelected == true)
             {
