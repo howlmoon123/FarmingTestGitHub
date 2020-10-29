@@ -80,6 +80,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
             return null;
     }
 
+   
 
     /// <summary>
     /// Add an item to the inventory list for the inventoryLocation and then destroy the gameObjectToDelete

@@ -46,7 +46,7 @@ public class AnimationOverrides : MonoBehaviour
 
             // Find animators in scene that match scriptable object animator type
             Animator[] animatorsArray = character.GetComponentsInChildren<Animator>();
-            Debug.LogError(" " + animatorSOAssetName);
+
             foreach (Animator animator in animatorsArray)
             {
                 if (animator.name == animatorSOAssetName)
@@ -55,7 +55,7 @@ public class AnimationOverrides : MonoBehaviour
                     break;
                 }
             }
-            Debug.Log("Current anim " + currentAnimator.gameObject.name);
+
             // Get base current animations for animator
             AnimatorOverrideController aoc = new AnimatorOverrideController(currentAnimator.runtimeAnimatorController);
             List<AnimationClip> animationsList = new List<AnimationClip>(aoc.animationClips);

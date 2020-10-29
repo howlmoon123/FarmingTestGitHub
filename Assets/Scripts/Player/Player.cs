@@ -265,6 +265,7 @@ public class Player : SingletonMonobehaviour<Player>
 
     public void ShowCarriedItem(int itemCode)
     {
+
         ItemsDetails itemDetails = InventoryManager.Instance.GetItemsDetails(itemCode);
         if (itemDetails != null)
         {
